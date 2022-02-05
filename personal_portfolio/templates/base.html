@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    
+        <nav class="navbar has-shadow is-black">
+            <div class="navbar-brand is-size-3-mobile">
+                <a class="navbar-item has-text-white is-size-5" href="{% url 'bio_page' %}">Home</a>
+                <a class="navbar-item has-text-white is-size-5" a class="nav-link" href="
+                {% url 'project_index' %}">Portfolio</a>
+                <a class="navbar-item has-text-white is-size-5" a class="nav-link" 
+                href="{% url 'blog_index' %}">Blog</a>            
+            </div>
+        </nav>
+</head>
+</body>
+{% block page_content %}{% endblock %}
+
+
+
+

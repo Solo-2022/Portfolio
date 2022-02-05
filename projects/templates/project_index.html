@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+
+<section class="section">
+    <div class="container">
+        <div class="columns is-vcentered is-multiline">
+            <div class="column is-6-tablet is-3-desktop">
+                <h1 class="is-size-3-mobile is-size-2-desktop title">Flitter</h1>
+                <h2 class="is-size-3-mobile is-size-4-desktop subtitle">A simple user communication platform</h2>
+                <ul style="list-style-type:square">
+                    <li>Users can create an account and authenticate to sign in </li>
+                    <li>Use a GitHub authentication system </li>
+                    <li>Upload images, video and URL links </li>
+                    <li>Post short text-based messages </li>
+                    <li>Follow and unfollow other users </li>
+                    <li>Inspect a feed from users that you follow </li>
+                </ul>
+            </div>    
+            <div class="column is-6-tablet is-5-desktop has-text-centered">
+                <div class="card-content has-background-warning-dark">
+                    <h1 class="title is-size-5 has-text-white"><strong>Social App</strong></h1>
+                    <h1 class="subtitle is-size-5 has-text-white">Full-Stack</h1>
+                </div>
+                <img src="{% static 'img/project1.jpg' %}" alt="project1 image" class="px-7">
+            </div>
+            <div class="column is-12-tablet is-4-desktop">
+                <div class="is-size-3-mobile is-size-3-desktop title mb-8">Technology</div>
+                <p class="mb-4> is-size-5-mobile is-size-5-desktop">Python, Django, Models, Object Oriented Programming, PostGreSQL, AWS, Javascript, HTML, CSS Bulma	
+                </p>
+                <button class="button is-danger">In Stage 3: Coding</button>
+                <a href="https://github.com/Solo-2022/Social-App" class="fa fa-github is-size-1"></a>                {% comment %} <button class="button is-dark">Link</button>  {% endcomment %}
+            </div>
+        </div>
+<br> <br> <br> 
+        <div class="columns is-vcentered is-multiline">
+            <div class="column is-6-tablet is-3-desktop">
+                <h1 class="is-size-3-mobile is-size-2-desktop title">Locale</h1>
+                <h2 class="is-size-3-mobile is-size-4-desktop subtitle">A data collection of nearby shops within your location</h2>
+                <ul style="list-style-type:square">
+                    <li>Backend web server </li>
+                    <li>Query to provide a subset of shops closest to a user's location </li>
+                    <li>Data stored in PostgreSQL relational database </li>
+                    <li>PostGIS extension to incorporate spatial data features </li>
+                    <li>GeoDjango for spatial data support </li>
+                </ul>
+            </div>    
+            <div class="column is-6-tablet is-5-desktop has-text-centered">
+                <div class="card-content has-background-info-dark">
+                    <h1 class="title is-size-5 has-text-white"><strong>Geo-Location</strong></h1>
+                    <h1 class="subtitle is-size-5 has-text-white">Back-End</h1>
+                </div>
+                <img src="{% static 'img/project2.jpg' %}" alt="project2 image" class="px-7">
+            </div>
+            <div class="column is-12-tablet is-4-desktop">
+                <div class="is-size-3-mobile is-size-3-desktop title mb-8">Technology</div>
+                <p class="mb-4> is-size-5-mobile is-size-5-desktop">Python, Django, Models, PostGreSQL, AWS, Javascript, HTML, CSS	
+                </p>
+                <button class="button is-danger">In Stage 2: Design</button>
+            </div>
+        </div>
+<br> <br> <br> 
+        <div class="columns is-vcentered is-multiline">
+            <div class="column is-6-tablet is-3-desktop">
+                <h1 class="is-size-3-mobile is-size-2-desktop title">Vitalmins</h1>
+                <h2 class="is-size-3-mobile is-size-4-desktop subtitle">Product information</h2>
+                <ul style="list-style-type:square">
+                    <li>Users can buy product </li>
+                    <li>Payment integration </li>
+                    <li>Product details </li>
+                    <li>Open an account </li>
+                </ul>
+            </div>    
+            <div class="column is-6-tablet is-5-desktop has-text-centered">
+                <div class="card-content has-background-primary-dark">
+                    <h1 class="title is-size-5 has-text-white"><strong>Product Website</strong></h1>
+                    <h1 class="subtitle is-size-5 has-text-white">Front-End</h1>
+                </div>
+                <img src="{% static 'img/vit.jpg' %}" alt="project3 image" class="px-7">
+            </div>
+            <div class="column is-12-tablet is-4-desktop">
+                <div class="is-size-3-mobile is-size-3-desktop title mb-8">Technology</div>
+                <p class="mb-4> is-size-5-mobile is-size-5-desktop">Python, Django, Javascript, AWS, HTML, CSS Bulma	
+                </p>
+                <button class="button is-danger">In Development Stage 1</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer class="footer">
+        <div class="container">
+            <div class="column right"> 
+                <p>
+                    <a href="https://github.com/Solo-2022" class="fa fa-github is-size-1"></a>
+                    <br>
+                    <a href="https://www.linkedin.com/in/solomon-moyabi-913b26209/" class="fa fa-linkedin is-size-1"></a>
+                    <br>
+                    <a href="mailto:solomoyabi88@hotmail.com"><strong>EMAIL ME HERE</strong></a>
+                    <br>
+                    <strong>Copyright 2022 Solomon Moyabi</strong>. 
+                </p>
+            </div>       
+        </div>  
+    </footer>
+</section>
+
+{% endblock %}

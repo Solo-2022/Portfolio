@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Blog</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    
+
+        <nav class="navbar has-shadow is-black">
+            <div class="navbar-brand is-size-3-mobile">
+                <a class="navbar-item has-text-white is-size-5" href="{% url 'bio_page' %}">Home</a>
+                <a class="navbar-item has-text-white is-size-5" a class="nav-link" href="
+                {% url 'project_index' %}">Portfolio</a>
+                <a class="navbar-item has-text-white is-size-5" a class="nav-link" 
+                href="{% url 'blog_index' %}">Blog</a>            
+            </div>
+        </nav>
+    </head>
+        
+        <style>
+            
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: 
+}
+
+.is-paddingless-horizontal { padding-left: 0; padding-right: 0; }
+        
+.grid {
+    display: grid;
+    grid-template-columns:
+        [xl-start] 1fr 1.5rem [md-start] minmax(0, 624px) [md-end] 1.5rem 1fr [xl-end];
+}
+
+.grid *  { grid-column: md; }
+.grid-xl { grid-column: xl; }
+
+@media (max-width: 672px) {
+    :root {
+        font-size: 90%;
+    }
+}
+        </style>
+    </head>
+    <body>
+    <br> <br>
+        <section class="section is-paddingless-horizontal" style="padding-top: 0;">
+            <div class="container grid">             
+                <div class="content is-medium">
+                    <div class="col-md-8 offset-md-2">
+                        <h1>{{ post.title }}</h1>
+                        <small>
+                            {{ post.created_on.date }} |&nbsp;
+                            Categories:&nbsp;
+                            {% for category in post.categories.all %}
+                            <a href="{% url 'blog_category' category.name %}">
+                                {{ category.name }}
+                            </a>&nbsp;
+                            {% endfor %}
+                        </small>
+                        <p>{{ post.body | linebreaks }}</p>
+                        <h3>Leave a comment:</h3>
+                        <form action="/blog/{{ post.pk }}/" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                {{ form.author }}
+                            </div>
+                            <div class="form-group">
+                                {{ form.body }}
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        <h3>Comments:</h3>
+                        {% for comment in comments %}
+                        <p>
+                        On {{comment.created_on.date }}&nbsp;
+                            <b>{{ comment.author }}</b> wrote:
+                        </p>
+                        <p>{{ comment.body }}</p>
+                        <hr>
+                        {% endfor %}
+                    </div>
+                </div>  
+            </div>
+            <footer class="footer">
+                <div class="container">
+                    <div class="row"> 
+                <p>
+                    <a href="https://github.com/Solo-2022" class="fa fa-github is-size-1"></a>
+                    <br>
+                    <a href="https://www.linkedin.com/in/solomon-moyabi-913b26209/" class="fa fa-linkedin is-size-1"></a>
+                    <br>
+                    <a href="mailto:solomoyabi88@hotmail.com"><strong>EMAIL ME HERE</strong></a>
+                    <br>
+                    <strong>Copyright 2022 Solomon Moyabi</strong>. 
+                </p>
+            </footer>
+        </section>
+    </body>
+</html>
+                

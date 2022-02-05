@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+            <style>
+            
+    .center{
+        display: flex;
+        justify-content: center;
+        align-items: 
+    }
+    
+    .is-paddingless-horizontal { padding-left: 0; padding-right: 0; }
+            
+    .grid {
+        display: grid;
+        grid-template-columns:
+            [xl-start] 1fr 1.5rem [md-start] minmax(0, 624px) [md-end] 1.5rem 1fr [xl-end];
+    }
+    
+    .grid *  { grid-column: md; }
+    .grid-xl { grid-column: xl; }
+    
+    @media (max-width: 672px) {
+        :root {
+            font-size: 90%;
+        }
+    }
+    
+            </style>
+<!-- product info -->
+    <section class="section">
+        <div class="container">
+            <div class="columns is-vcentered is-multiline">
+                <div class="column is-6-tablet is-6-desktop">
+                  <div class="section is-paddingless-horizontal">
+                    <h1 class="title is-3">
+                        Software Development      
+                    </h1>
+                    <h2 class="is-size-4">
+                        Building ideas into practical existence
+                    </h2>
+                </div>
+            </div>    
+            <div class="column is-6-tablet is-5-desktop has-text-centered">
+                <img src="{% static 'img/soft.jpg' %}" alt="intro image" class="px-7">
+            </div>
+            
+            </div>
+        </div>
+    </section>
+    <section class="section is-paddingless-horizontal" style="padding-top: 0;">
+        <div class="container grid">
+            <div class="content is-medium">
+                <div class="container is-fluid">
+                    <div class="notification is-light-black">
+                        <div class="block">
+                            <strong>Solomon Moyabi</strong>
+                        </div>
+                        <div class="block">
+                            I'm a Web and Software Developer from London.
+                        </div>
+                        <div class="block">
+                            Building eye-catching user interfaces with reliable backend 
+                            functionality is a quality I aim to provide.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div>
+    </section>       
+    
+    <section class="section is-paddingless-horizontal" style="padding-top: 0;">
+        <div class="container grid">
+            <div class="content is-medium">
+                <div class="container is-fluid">              
+                    <div class="tile is-ancestor">
+                        <div class="tile is-vertical is-8">
+                        <div class="tile">
+                            <div class="tile is-parent is-vertical">
+                            <article class="tile is-child notification has-background-primary-dark">
+                                <p class="title has-text-white">Front-End</p>
+                                <p class="subtitle has-text-white"> JavaScrpt, HTML, CSS, CSS BULMA</p>
+                            </article>
+                            </div>
+                            <div class="tile is-parent">
+                            <article class="tile is-child notification has-background-info-dark">
+                                <p class="title has-text-white">Back-End</p>
+                                <p class="subtitle has-text-white">Python, Django, Models, AWS, PostGreSQL</p>
+                            </article>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="tile is-parent">
+                        <article class="tile is-child notification has-background-warning-dark">
+                            <div class="content">
+                            <p class="title has-text-white">Full-Stack</p>
+                            <p class="subtitle has-text-white">Python, Django, Models, Object relational mapping, AWS, Javascript</p>
+                            <div class="content">
+                                <!-- Content -->
+                            </div>
+                            </div>
+                        </article>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </section>                                   
+    <section class="section">
+        <div class="container">
+            <div class="columns mt-5 is-8 is-variable is-centered">
+                <div class="column is-4-tablet is-3-desktop">
+                    <div class="card">
+                        <div class="card-image has-text-centered px-10">
+                            <img src="{% static 'img/vit.jpg' %}" alt="product">
+                        </div>
+                        <div class="card-content has-background-primary-dark">
+                            <p class="has-text-white">Front-End</p>
+                            <p class="title is-size-5 has-text-white">Product Website</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4-tablet is-3-desktop">
+                    <div class="card">
+                        <div class="card-image has-text-centered px-64x64">
+                            <img src="{% static 'img/project2.jpg' %}" alt="product">
+                        </div>
+                        <div class="card-content has-background-info-dark">
+                            <p class="has-text-white">Back-End</p>
+                            <p class="title is-size-5 has-text-white">Geo-Location</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4-tablet is-3-desktop">
+                    <div class="card">
+                        <div class="card-image has-text-centered px-10">
+                            <img src="{% static 'img/project1.jpg' %}" alt="product">
+                        </div>
+                        <div class="card-content has-background-warning-dark">
+                            <p class="has-text-white">Full-Stack</p>
+                            <p class="title is-size-5 has-text-white">Social App</p>
+                        </div>        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container is-max-desktop">
+            <div class="columns mt-5 is-8 is-variable is-centered">
+                <div class="column is-4-tablet is-3-desktop">
+                    <div class="content has-text-centered">
+                        <button class="title has-text-centered is-size-4 button is-dark is-rounded">
+                            <a class="has-text-white is-size-6" href="
+                            {% url 'project_index' %}">Portfolio</a>
+                        </button>  
+                    </div>       
+                </div>
+            </div>
+        </div>
+            <br>
+            <br>
+            <div class="container">
+                <div class="notification is-black">
+                    <strong>Recent blog post</strong>
+                </div>
+            </div>
+        <br>
+        <section class="section is-paddingless-horizontal" style="padding-top: 0;">
+            <div class="container grid">
+                <div class="content is-medium">
+                    <h6 class="text has-text-centered"><strong>Feb/04/2022 | Transitioning into the unknown</strong></h6>
+                    <figure class="image is-3">
+                        <img class="is-rounded" src="{% static 'img/think.jpg' %}">
+                    </figure>                          
+                    <div class"has-text-centered">
+                        Changing what you do for a living can be one of the most daunting experiences to deal with, 
+                        especially at the very early stages of the transitional period. 
+                        I recently made the tough decision to begin a new career in the IT & Technology area, 
+                        with no prior experience, skillset, or technical knowledge under my belt. 
+                        Even though I was taking on quite a sizable challenge ahead, 
+                        I never thought twice about what I wanted to do. However, I still felt intimidated by the whole prospect
+                        of throwing myself into the unknown..........
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container is-max-desktop">
+            <div class="columns mt-5 is-8 is-variable is-centered">
+                <div class="column is-4-tablet is-3-desktop">
+                    <div class="content has-text-centered">
+                        <button class="title has-text-centered is-size-4 button is-dark is-rounded">
+                            <a class="has-text-white is-size-6" href="
+                            {% url 'blog_index' %}">Blog</a>
+                        </button>  
+                    </div>       
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="column right"> 
+                    <p>
+                        <a href="https://github.com/Solo-2022" class="fa fa-github is-size-1"></a>
+                        <br>
+                        <a href="https://www.linkedin.com/in/solomon-moyabi-913b26209/" class="fa fa-linkedin is-size-1"></a>
+                        <br>
+                        <a href="mailto:solomoyabi88@hotmail.com"><strong>EMAIL ME HERE</strong></a>
+                        <br>
+                        <strong>Copyright 2022 Solomon Moyabi</strong>. 
+                    </p>
+                </div>       
+            </div>  
+        </footer>
+    </section>
+
+{% endblock %}
